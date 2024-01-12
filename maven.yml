@@ -32,6 +32,6 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Build Image
       run: |
-        echo ${{secrets.DOCKER_TOKEN}} | docker login -u nikosnikolaidis --password-stdin
-        docker build -t nikosnikolaidis/test-2 .
-        docker push nikosnikolaidis/test-2
+        echo ${{secrets.DOCKER_TOKEN}} | docker login -u https://github.com/StathisPetridisStudent --password-stdin
+        docker build -t https://github.com/StathisPetridisStudent/test-2 .
+        docker push https://github.com/StathisPetridisStudent/test-2
